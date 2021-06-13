@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "name": "Computador Gamer",
+      "price": "2555.99",
+      "id": 1
+    },
+    {
+      "name": "Caderno",
+      "price": "5.99",
+      "id": 2
+    }
+  ]
+}

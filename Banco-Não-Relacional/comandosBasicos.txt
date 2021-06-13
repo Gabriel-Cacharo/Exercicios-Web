@@ -1,0 +1,9 @@
+show dbs --Mostrar os bancos
+
+use wm --Trocar de banco
+
+db.createCollection('estados') --Criar coleção
+
+show collections --Mostrar coleções criadas
+
+db.Estados.drop() --Dropar a tabela

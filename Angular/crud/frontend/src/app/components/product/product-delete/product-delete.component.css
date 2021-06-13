@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.container p {
+  font-size: 1.2rem;
+  font-weight: 400;
+
+  margin-top: 20px;
+}
+
+.container .buttons {
+  margin-bottom: 20px;
+}
+
+form {
+  margin: 20px;
+}

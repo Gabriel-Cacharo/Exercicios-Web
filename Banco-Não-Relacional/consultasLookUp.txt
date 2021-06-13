@@ -1,0 +1,24 @@
+db.empresas.aggregate([
+  {$match: {nome: "Bradesco"}},
+  {$lookup: {
+    from: "estados",
+    localField: "estadoId",
+    foreignField: "_id",
+    as: "estado"
+  }},
+  {$unwind: "$estado"},
+]).pretty()
+
+db.empresas.aggregate([
+  {$match: {nome: "Vale"}},
+  {$lookup: {
+    from: "estados",
+    localField: "cidadeId",
+    foreignField: "cidades._id",
+    as: "estado"
+  }},
+  {$unwind: "$estado"},
+  {$unwind: "$estado.cidades"},
+  {$addFields: { mesmaCidade: {$cmp: ["$estado.cidades._id", "$cidadeId"]}}}, --Quando for a mesma cidade ele vai dar 0, se não irá dar -1
+  {$match: { mesmaCidade: 0 }},
+]).pretty()
