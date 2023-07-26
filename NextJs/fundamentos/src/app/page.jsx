@@ -12,6 +12,12 @@ export default function Home() {
       }}
     >
       <Navegador destino="/estiloso" titulo="Ir para Estiloso" />
+      <Navegador destino="/navegacao" titulo="Navegação #01" cor="#9400d3" />
+      <Navegador
+        destino="/cliente/123"
+        titulo="Navegação #02 (Dinâmica)"
+        cor="#9400d3"
+      />
     </main>
   );
 }
